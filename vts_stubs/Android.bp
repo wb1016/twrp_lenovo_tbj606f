@@ -1,8 +1,7 @@
 // Stub defaults and module definitions for minimal TWRP builds.
-// The platform/test/vts, platform/cts, packages/modules/NetworkStack, and other
-// projects are removed from the minimal manifest, but many Android.bp files in
-// remaining projects still reference these modules. These empty stubs satisfy
-// those references.
+// Several projects are removed from the minimal manifest, but many Android.bp
+// files in remaining projects still reference modules from those removed projects.
+// These empty stubs satisfy those references.
 
 cc_defaults {
     name: "VtsHalDriverDefaults",
@@ -15,6 +14,11 @@ cc_defaults {
 }
 
 cc_defaults {
+    name: "VtsHalTargetTestDefaults",
+    // Intentionally empty — stub to satisfy build dependencies
+}
+
+cc_defaults {
     name: "vts_proto_fuzzer_default",
     // Intentionally empty — stub to satisfy build dependencies
 }
@@ -22,6 +26,12 @@ cc_defaults {
 cc_defaults {
     name: "cts_defaults",
     // Intentionally empty — stub to satisfy build dependencies
+}
+
+cc_defaults {
+    name: "hidl_defaults",
+    // Intentionally empty — stub to satisfy build dependencies
+    // (system/libhidl removed from minimal manifest)
 }
 
 java_library {
