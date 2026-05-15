@@ -1,0 +1,24 @@
+// Stub VTS/CTS defaults definitions for minimal TWRP builds.
+// The platform/test/vts and platform/cts projects are removed from the minimal manifest,
+// but many hardware interface Android.bp files still reference these modules.
+// These empty stubs satisfy those references.
+
+cc_defaults {
+    name: "VtsHalDriverDefaults",
+    // Intentionally empty — stub to satisfy build dependencies
+}
+
+cc_defaults {
+    name: "VtsHalProfilerDefaults",
+    // Intentionally empty — stub to satisfy build dependencies
+}
+
+cc_defaults {
+    name: "vts_proto_fuzzer_default",
+    // Intentionally empty — stub to satisfy build dependencies
+}
+
+cc_defaults {
+    name: "cts_defaults",
+    // Intentionally empty — stub to satisfy build dependencies
+}
