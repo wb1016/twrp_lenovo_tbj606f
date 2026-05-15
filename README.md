@@ -120,10 +120,17 @@ that remaining hardware projects reference.
 
 ### 4. Set up the build environment and build
 
-The AOSP build system requires **bash**. If your default shell is fish or zsh, run bash first:
+The AOSP build system requires **bash**. If your default shell is fish or zsh, run bash first.
+
+**Important:** `ALLOW_MISSING_DEPENDENCIES=true` is required. The minimal TWRP manifest removes
+many repos (test frameworks, car modules, benchmark tools, etc.) that are not needed for recovery.
+Without this flag, the build will fail on undefined modules from those removed repos. With it,
+the build system skips any modules whose dependencies are not available, and only builds what is
+needed for the recovery image.
 
 ```bash
 bash
+export ALLOW_MISSING_DEPENDENCIES=true
 source build/envsetup.sh
 lunch twrp_tbj606f-eng
 mka recoveryimage

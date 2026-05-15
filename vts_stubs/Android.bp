@@ -14,11 +14,6 @@ cc_defaults {
 }
 
 cc_defaults {
-    name: "VtsHalTargetTestDefaults",
-    // Intentionally empty — stub to satisfy build dependencies
-}
-
-cc_defaults {
     name: "vts_proto_fuzzer_default",
     // Intentionally empty — stub to satisfy build dependencies
 }
@@ -26,12 +21,6 @@ cc_defaults {
 cc_defaults {
     name: "cts_defaults",
     // Intentionally empty — stub to satisfy build dependencies
-}
-
-cc_defaults {
-    name: "hidl_defaults",
-    // Intentionally empty — stub to satisfy build dependencies
-    // (system/libhidl removed from minimal manifest)
 }
 
 // frameworks/av stubs
@@ -55,7 +44,25 @@ cc_defaults {
     // Intentionally empty — stub to satisfy build dependencies
 }
 
-java_library {
+java_defaults {
     name: "libnetworkstackutilsjni_deps",
+    // Intentionally empty — stub to satisfy build dependencies
+}
+
+// Qualcomm camera stubs (hardware/qcom/camera removed from minimal manifest)
+cc_defaults {
+    name: "qti_camera_device_defaults",
+    // Intentionally empty — stub to satisfy build dependencies
+}
+
+// VTS test defaults (test/vts removed from minimal manifest)
+cc_defaults {
+    name: "vts_target_tests_defaults",
+    // Intentionally empty — stub to satisfy build dependencies
+}
+
+// external/okhttp stubs (removed from minimal manifest)
+java_library {
+    name: "okhttp-tests-nojarjar",
     // Intentionally empty — stub to satisfy build dependencies
 }
