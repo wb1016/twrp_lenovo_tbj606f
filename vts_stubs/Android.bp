@@ -34,10 +34,25 @@ cc_defaults {
     // (system/libhidl removed from minimal manifest)
 }
 
+// frameworks/av stubs
 cc_defaults {
     name: "libcodec2-internal-defaults",
     // Intentionally empty — stub to satisfy build dependencies
-    // (frameworks/av removed from minimal manifest)
+}
+
+cc_defaults {
+    name: "libcodec2-impl-defaults",
+    // Intentionally empty — stub to satisfy build dependencies
+}
+
+cc_defaults {
+    name: "libmedia_codecs_defaults",
+    // Intentionally empty — stub to satisfy build dependencies
+}
+
+cc_defaults {
+    name: "libaudioclient_defaults",
+    // Intentionally empty — stub to satisfy build dependencies
 }
 
 java_library {
