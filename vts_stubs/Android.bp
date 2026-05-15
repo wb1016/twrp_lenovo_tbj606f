@@ -34,6 +34,12 @@ cc_defaults {
     // (system/libhidl removed from minimal manifest)
 }
 
+cc_defaults {
+    name: "libcodec2-internal-defaults",
+    // Intentionally empty — stub to satisfy build dependencies
+    // (frameworks/av removed from minimal manifest)
+}
+
 java_library {
     name: "libnetworkstackutilsjni_deps",
     // Intentionally empty — stub to satisfy build dependencies
